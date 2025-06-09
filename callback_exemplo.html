@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calback Exemplo</title>
+</head>
+<body>
+    <p id="#demo1"></p>
+
+    <script>
+        const botao = document.querySelector("button")
+        botao.addEventListener("click", () => {
+            let data;
+            for( let i = 0; i < 100000000; i++){
+                let data = new Date();
+                minhaData = data;
+            }
+            console.log(minhaData);
+
+            let paragrafo = document.createElement("p");
+            paragrafo.innerHTML = "Este é um paragráfo recém adicionada"
+            document.body.appendChild(paragrafo);
+        });
+
+
+    </script>
+    
+</body>
+</html>

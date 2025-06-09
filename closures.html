@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closures</title>
+</head>
+<body>
+    <h2>Closures</h2>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <script>
+
+        function contagem(){
+            let contador = 0;
+            return function(){
+                contador++;
+                return contador
+            }
+        }
+
+
+        const conta = contagem();
+        conta();    
+        conta();
+        document.querySelector("#demo1").innerHTML = conta();
+    </script>
+</body>
+</html>

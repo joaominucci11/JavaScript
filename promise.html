@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+<body>
+    <h1>Objeto JavaScript Promise</h1>
+
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <script>
+        const visualizar = algo => document.querySelector("#demo1")
+            .innerHTML = algo;
+
+        let minnhaPromessa = new Promise(function(cumprido, quebrado){
+            let minhaData = 0;
+            for( let i = 0; i < 100000000; i++){
+                let data = new Date();
+                minhaData = data;
+            }
+            console.log(minhaData);
+            if (minhaData !=0){
+                cumprido("ok!");
+            } else {
+                quebrado("Deu ruim!");
+            }
+        })
+
+        minnhaPromessa.then(
+            function(valor) {visualizar(valor);},
+            function(desculpa) {visualizar(desculpa);}
+        
+        );
+
+    </script>
+</body>
+</html>

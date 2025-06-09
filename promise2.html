@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise 2</title>
+</head>
+<body>
+    <h1>Promessa</h1>
+    <h2>Método then</h2>
+    <p>Espere 3 segundos</p>
+    <h1 id="demo"></h1>
+    <script>
+        const minnhaPromessa = new Promise(function(cumprido, quebrado){
+            
+            setTimeout(function(){cumprido("olá");}, 3000);
+        });
+
+        minnhaPromessa.then(function(valor){
+
+                document.getElementById("demo").innerHTML = valor;
+            }
+        );
+
+        
+    </script>
+    
+</body>
+</html>

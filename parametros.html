@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parâmatros</title>
+</head>
+<body>
+    <h2>Parâmetros</h2>
+    <p id="demo1"></p>
+    <script>
+        const minhaFunc1 = (a, b) => {
+            console.log(b);
+            return a * b;
+        }
+        document.querySelector("#demo1").innerHTML = minhaFunc1(2, 3);
+
+        const minhaFunc2 = (...args)=>{
+            let soma = 0;
+            // forma tradicional de usar for em JavaScript
+           /* for(let i = 0; i < args.length; i++){
+                soma += args [i];
+            }*/
+            for(let arg of args) soma += arg; //maneira mais moderna
+            return soma;
+        }
+        document.querySelector("#demo2").innerHTML = minhaFunc2(2, 3);
+
+        window.minhaFunc1
+
+    </script>
+</body>
+</html>

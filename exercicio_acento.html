@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício de Funções em JavaScript</title>
+</head>
+<body>
+    <h2>Exercício de Funções em JavaScript</h2>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <script>
+        function minhaFunc1(a, b){
+            return a * b
+        }
+        document.querySelector("#demo1").innerHTML = minhaFunc1(2, 3);
+
+        const minhaFunc2 = function(a, b){ //função anônima 
+            return a * b;
+        }
+        document.querySelector("#demo2").innerHTML = minhaFunc2(2, 4);
+        
+        
+        const minhaFunc3 = new Function("a", "b", "return a * b"); //não muito usado
+        document.querySelector("#demo3").innerHTML = minhaFunc3(2, 5);
+
+        document.querySelector("#demo4").innerHTML = (function(a, b){ return a * b;})(2, 6);
+
+
+        document.querySelector("#demo5").innerHTML = minhaFunc3(2, 3) * 2;
+
+        function minhaFunc6(a, b){
+            return arguments.length;
+        }
+        document.querySelector("#demo6").innerHTML = minhaFunc6(2, 3);
+
+        let x = 0;
+
+        let minhaFunc7 = function(a){
+            x = 1; //efeito colateral
+            console.log("Vai Corinthians"); //efeito colateral
+            let y = print("por favor, inzira seu nóme.."); //efeito colateral 
+
+            return a + 2;
+        }
+
+        let minhaFunc8 = function(a, b){
+            return b = 1;
+        }
+    
+        x = minhaFunc(2, x);
+    </script>
+</body>
+</html>

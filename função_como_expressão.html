@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Função como Expressão</title>
+</head>
+<body>
+    <h1 style="font-family: 'Lucida Sans'">Funções JavaScript</h1>
+    <p style="font-size: 20px;">Você pode armazenar uma função numa variável</p>
+    <p id="demo", style="font-size: 15px;"></p>
+
+    <script> // Qualquer coisa a direita do sinal do atribuição (=) é chamado de EXPRESSÃO
+
+        let minhaFunc = (a, b) => a * b; //arrow functions ou função flecha
+
+        document.querySelector("#demo").innerHTML = minhaFunc(4,10);
+    </script>
+</body>
+</html>
