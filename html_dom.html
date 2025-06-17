@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML DOM</title>
+</head>
+<body>
+    <h2>HTML DOM</h2>
+    <p>Encontrando elementos HTML usando <b>document.forms</b>.</p>
+    <form id="form1" action="">
+        Nome: <input type="text" name="nomeform" value="Justin"><br>
+        Sobrenome: <input type="text" name="Sobrenomeform" value="Bieber"><br> 
+        <button type="button">Enviar</button>
+    </form>
+    <p>Esses são os valores para cada elemento do formulário:</p>
+    <p id="demo1"></p>
+
+    <script>
+        const x = document.forms["form1"];
+        let texto = "";
+        for (let elemento in x.elements){
+            texto += elemento.value + "<br>";
+        }
+        
+        document.querySelector("#demo1").innerHTML = texto;
+    </script>
+</body>
+</html>

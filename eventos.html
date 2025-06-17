@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+</head>
+<body>
+    <h2>Eventos HTML em JavaScript</h2>
+    <h2>O atributo onclick</h2>
+ 
+    <button id="meuBt">Clique neste botão</button>
+    <script>
+        elemento = document.querySelector("#meuBt");
+        elemento.addEventListener("click", mudarTexto);
+        elemento.addEventListener("mouseover", mouseSobre);
+        elemento.addEventListener("mouseout", mouseFora);
+ 
+        function mudarTexto(){
+            elemento.innerHTML = "Opa!";
+        }
+        function mouseSobre(){
+            elemento.innerHTML = "Mouse sobre!";
+        }
+        function mouseFora(){
+            elemento.innerHTML = "Mouse fora!";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nós DOM</title>
+</head>
+<body>
+    <h2>DOM HTML em JavaScript</h2>
+    <p>Acrescentando um novo elemento HTML</p>
+    <div id="div1">
+            <p id="p1">Este é um parágrafo.</p>
+            <p id="p2">Este é outro parágrafo.</p>
+    </div>
+    <script>
+        const paragrafo = document.createElement("p");
+        paragrafo.innerHTML = "O Mozinho é fofinho!";
+        document.querySelector("#div1").appendChild(paragrafo);
+
+        const paragrafo2 = document.createElement("p");
+        paragrafo2.innerHTML = "Sasuke GOAT de naruto";
+        document.querySelector("#div1").appendChild(paragrafo2);
+
+        document.querySelector("#p1").remove();
+
+        const paragrafo3 = document.createElement("p");
+        paragrafo3.innerHTML = "Até que a morte nos separe!"
+
+        const p2 = document.querySelector("#p2");
+
+        document.querySelector("#div1").removeChild(paragrafo3, p2);
+
+    </script>
+</body>
+</html>

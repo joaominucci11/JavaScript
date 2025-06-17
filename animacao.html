@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animação</title>
+</head>
+<body>
+    <style>
+        #contêiner {
+            width: 400px;
+            height: 400px;
+            background-color: lightblue;
+            position: relative;
+        }
+        #animar {
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            position: absolute;
+        }
+    </style>
+    <p><button onclick="minhaAnimacao()">Clique aqui</button></p>
+    <div id="contêiner">
+        <div id="animar"></div>
+    </div>
+    <script>
+        function minhaAnimacao(){
+            let id = null;
+            const elemento = document.querySelector("#animar");
+            let pos = 0;
+            clearInterval(id);
+            id = setInterval(frame, 5);
+            function frame() {
+                if (pos == 350) {
+                    clearInterval(id);
+                } else {
+                    pos++;
+                    elemento.style.top = pos + 'px';
+                    elemento.style.left = pos + 'px';
+                }
+            }
+        }
+    </script>
+</body>
+</html>
