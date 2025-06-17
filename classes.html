@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes</title>
+</head>
+<body>
+    <h1>Classes em JavaScript</h1>
+    <p>Criando a classe Carro</p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <script>
+        class Carro {
+            constructor(m, a){
+                this.marca = m;
+                this.ano = a;
+            }
+            idade(){
+                const data = new Date();
+                return data.getFullYear() - this.ano;
+            }
+            static alo(){
+                return "Alô!";
+            }
+            set nomeCarro(m){
+                this.marca = m
+            }
+            get nomeCarro(){
+                return this.marca;
+            }
+            //Carro()
+        }
+        class Caminhao extends Carro{
+            constructor(m, a, f){
+               
+            }
+        }
+        const carro1 = new Carro("Volskwagen", 2008);
+        const carro2 = new Carro("Porsche", 2024);
+        const caminhao1 = new Caminhao("Volvo", 2015);
+        carro1.nomeCarro = "Audi";
+ 
+        document.querySelector("#demo1").innerHTML =
+        Carro.alo() + " O carro é da marca " + carro1.nomeCarro + " e do ano " + carro1.ano + " e tem " + carro1.idade() + " anos ";
+        
+        document.querySelector("#demo2").innerHTML =
+        "O carro é da marca " + carro2.marca + " e do ano " + carro2.ano + " e tem " + carro2.idade() + " anos ";
+        
+        document.querySelector("#demo3").innerHTML =
+        "O caminhão é da marca " + caminhao1.marca + " e do ano " + caminhao1.ano + " e tem " + caminhao1.idade() + " anos ";
+    </script>
+</body>
+</html>
