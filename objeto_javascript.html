@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto JavaScript</title>
+</head>
+<body>
+    <h2>Acessando um objeto JavaScript</h2>
+    <p id="demo1"></p>
+
+    <script>
+        const meuObj = {
+            nome: "João",
+            idade: 17,
+            cidade: "São Paulo",
+            nascimento: function () {
+                return new Date().getFullYear() - this.idade ;
+            }
+        };
+        document.querySelector("#demo1").innerHTML = meuObj.nascimento();
+
+        const meuJSON = JSON.stringify(meuObj);
+
+        console.log(meuJSON);
+
+        const outroObj = JSON.parse(meuJSON);
+        console.log(outroObj);
+        console.log(outroObj.nome);
+
+    </script>
+</body>
+</html>

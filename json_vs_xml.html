@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON vs XML</title>
+</head>
+<body>
+    <alunos>
+        <aluno>
+            <nome>João</nome>
+            <idade>17</idade>
+            <carro>null</carro>
+        </aluno>
+        <aluno>
+            <nome>Mari</nome>
+            <idade>17</idade>
+            <carro>null</carro>
+        </aluno>    
+        <aluno>
+            <nome>Samuel</nome>
+            <idade>17</idade>
+            <carro>null</carro>
+        </aluno>    
+    </alunos>
+    <script>
+       const meuJSON = '{"alunos": [{"nome":"João", "idade":17, "carro": null}, {"nome":"Mari", "idade":17, "carro": null}, {"nome":"Samuel", "idade":17, "carro": null}]}'; 
+       const meuObj = {"alunos": [
+        {"nome":"João", "idade":17, "carro": null}, 
+        {"nome":"Mari", "idade":17, "carro": null}, 
+        {"nome":"Samuel", "idade":17, "carro": null}
+
+
+        ]};
+    </script>
+</body>
+</html>
